@@ -1,6 +1,5 @@
 import express from "express"
 
-import mongoose from "mongoose";
 
 import { mentor as mentormodel,student as studentmodel } from "./dbmodel/model.js";
 
