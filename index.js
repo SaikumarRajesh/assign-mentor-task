@@ -1,4 +1,4 @@
-import express from "express"
+import express from "express";
 
 
 import { mentor as mentormodel,student as studentmodel } from "./dbmodel/model.js";
