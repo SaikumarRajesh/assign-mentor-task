@@ -145,7 +145,7 @@ app.put('/assign-mentor/:studentid', async (req, res) => {
       }
     }
 
-    // Updates the student's mentor to the new mentor
+    // Updates the student's mentor to the new mentors
     studentdetail.mentorId = newMentorId;
     await studentdetail.save();
 
