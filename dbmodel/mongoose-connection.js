@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const dbconnect = async () => {
     try{
-    await mongoose.connect('mongodb://127.0.0.1:27017/assign-mentor',{
-        useNewUrlParser: true
+    await mongoose.connect('mongodb://0.0.0.0:27017/assign-mentor',{
+        useNewUrlParser: true,useUnifiedTopology: true
     });
     console.log("DB coonected succesfully");
 }
