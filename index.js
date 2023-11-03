@@ -1,5 +1,5 @@
 import express from "express";
-import 'dotenv/config';
+
 
 import { mentor as mentormodel,student as studentmodel } from "./dbmodel/model.js";
 
@@ -7,7 +7,7 @@ import dbconnect from "./dbmodel/mongoose-connection.js";
 
 const app = express();
 
-const port = process.env.port ||3200;
+const port =3700;
 
 app.use(express.static("public"));
 
@@ -207,5 +207,5 @@ app.get('/previous-mentor/:studentid', async (req, res) => {
 
 
 app.listen(port, () => {
-    console.log('Application Started on port 3200');
+    console.log('Application Started on port 3700');
       });
