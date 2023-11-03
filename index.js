@@ -1,5 +1,5 @@
 import express from "express";
-
+import 'dotenv/config';
 
 import { mentor as mentormodel,student as studentmodel } from "./dbmodel/model.js";
 
@@ -7,7 +7,7 @@ import dbconnect from "./dbmodel/mongoose-connection.js";
 
 const app = express();
 
-const port = 3200;
+const port = process.env.port ||3200;
 
 app.use(express.static("public"));
 
