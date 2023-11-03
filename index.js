@@ -152,9 +152,6 @@ app.put('/assign-mentor/:studentid', async (req, res) => {
     newMentor.studentsId.push(studentdetail.studentid);
     await newMentor.save();
 
-
-   
-
     res.send({ msg: 'Mentor assigned to student successfully', student: studentdetail.studentid, mentor: newMentorId });
   } catch (err) {
     console.log(err);
@@ -196,11 +193,11 @@ app.get('/previous-mentor/:studentid', async (req, res) => {
       res.status(404).send('Student not found.');
       return;
     }
-   const previousMentor= null;
+  //  const previousMentor= null;
     res.send({
       studentId: student.studentid,
       studentName: student.studentname,
-      previousMentorId: previousMentor? student.previousMentorId : 'No previous mentor'
+      previousMentorId: student.previousMentorId ? student.previousMentorId : 'No previous mentor'
     });
   } catch (err) {
     console.log(err);
