@@ -1,8 +1,14 @@
 import mongoose from "mongoose";
+import dotenv from 'dotenv';
 
-const username="saikumar";
-const password ="d5GZzac0dNLyKYn7"
-const cloudurl =`mongodb+srv://saikumar:${password}@cluster0.c4xezro.mongodb.net/assign-mentor-student?retryWrites=true&w=majority`;
+dotenv.config();
+
+const username = process.env.DB_USERNAME || '';
+const password = process.env.DB_PASSWORD || '';
+const clusterName = process.env.DB_CLUSTER || '';
+const dbName = process.env.DB_NAME || '';
+
+const cloudurl = `mongodb+srv://${username}:${password}@${clusterName}/${dbName}?retryWrites=true&w=majority`;
 const localurl ="mongodb://0.0.0.0:27017/assign-mentor";
 
 const dbconnect = async () => {

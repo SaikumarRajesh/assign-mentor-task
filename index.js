@@ -7,7 +7,7 @@ import dbconnect from "./dbmodel/mongoose-connection.js";
 
 const app = express();
 
-const port =3700;
+const port =process.env.port || 3700;
 
 app.use(express.static("public"));
 
